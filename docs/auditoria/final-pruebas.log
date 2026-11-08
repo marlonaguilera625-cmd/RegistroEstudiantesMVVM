@@ -1,0 +1,69 @@
+C:\Users\Marlon\source\repos\RegistroEstudiantesMVVM\tests\RegistroEstudianteMAUI.FunctionalTests\RegistroEstudianteMAUI.FunctionalTests.csproj : warning NU1900: Error al obtener los datos de vulnerabilidad del paquete: No se puede cargar el índice de servicio del origen https://api.nuget.org/v3/index.json.
+PASS: Inicio sin fecha y Guardar bloqueado
+PASS: A: formulario inicial sin errores visibles
+PASS: B: correo inválido solo muestra y notifica su error
+PASS: C: corregir correo elimina su error sin habilitar Guardar
+PASS: D: teléfono vacío tras normalizar solo muestra su error
+PASS: Corregir teléfono elimina su error
+PASS: E: modificar Nombre solo actualiza su error
+PASS: F: seleccionar Carrera solo notifica su error
+PASS: G: cambiar Fecha solo muestra y notifica su error
+PASS: I: todos los datos válidos habilitan Guardar
+PASS: Cada campo previamente modificado puede mostrar su propio error
+PASS: H: Limpiar borra errores y valores
+PASS: H: después de Limpiar se restablecen los estados de interacción
+PASS: Guardar invocado directamente con datos inválidos no revela campos intactos ni registra
+PASS: Fecha intacta oculta su error pero sigue siendo obligatoria
+PASS: Fecha futura bloqueada
+PASS: Fecha válida habilita Guardar y notifica CanExecute
+PASS: Correo inválido bloqueado
+PASS: Carrera obligatoria
+PASS: Guardar añade un registro y notifica la colección
+PASS: Datos del registro conservados y nombre normalizado
+PASS: Guardar limpia campos y bloquea el siguiente registro
+PASS: Confirmación conservada sin errores tras guardar
+PASS: Limpiar restablece formulario sin borrar estudiantes
+PASS: Segundo registro actualiza colección
+PASS: Nombre inválido: '23'
+PASS: Nombre inválido: 'María23'
+PASS: Nombre inválido: 'María@José'
+PASS: Nombre inválido: ''
+PASS: Nombre inválido: ' '
+PASS: Nombre inválido: 'José--Luis'
+PASS: Nombre inválido: '́José'
+PASS: Nombre válido: 'María José Aguilera'
+PASS: Nombre válido: 'José Núñez'
+PASS: Nombre válido: 'María-José'
+PASS: Nombre válido: 'O'Connor'
+PASS: Nombre válido: 'José'
+PASS: Nombre válido: '  María  José  '
+PASS: Correo 33 inválido
+PASS: Correo usuario@gmail.com válido
+PASS: Teléfono inválido: 'rd'
+PASS: Teléfono inválido: '9999888'
+PASS: Teléfono inválido: '999988888'
+PASS: Teléfono inválido: '+503 9999-8888'
+PASS: Teléfono inválido: '9999rd88'
+PASS: Teléfono inválido: '９９９９８８８８'
+PASS: Teléfono inválido: '9999/8888'
+PASS: Teléfono inválido: ''
+PASS: Teléfono inválido: ' '
+PASS: Teléfono válido: '99998888'
+PASS: Teléfono válido: '+504 9999-8888'
+PASS: Teléfono válido: '+50499998888'
+PASS: Teléfono válido: '9999-8888'
+PASS: Teléfono válido: '9999 8888'
+PASS: Carrera vacía o ajena al catálogo bloqueada
+PASS: Carrera vacía o ajena al catálogo bloqueada
+PASS: Carrera válida: Administración de Empresas
+PASS: Carrera válida: Derecho
+PASS: Carrera válida: Ingeniería en Sistemas
+PASS: Carrera válida: Medicina
+PASS: Carrera válida: Psicología
+PASS: Fecha no seleccionada bloqueada
+PASS: Fecha futura bloqueada con las nuevas reglas
+PASS: Fecha seleccionada válida y formulario completo habilitado
+PASS: Nombre numérico solo muestra su propia advertencia
+PASS: Teléfono con letras solo muestra su propia advertencia
+PASS: Limpiar restablece advertencias y Guardar tras las nuevas validaciones
+67 comprobaciones funcionales correctas. No prueban la interfaz nativa.

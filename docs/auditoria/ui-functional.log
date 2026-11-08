@@ -1,0 +1,6 @@
+GuardarEnabled=False
+GuardarEnabled=True
+PASS: UI Limpiar vació las tres entradas y conservó el estudiante
+PASS: UI selección real de carrera, fecha futura bloqueada y fecha válida habilita Guardar
+PASS: UI Guardar mostró confirmación, limpió fecha y entradas, bloqueó Guardar y creó tarjeta con cinco datos
+PASS: ventana 1100 px usa dos columnas; ventana 520 px usa una columna

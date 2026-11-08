@@ -1,0 +1,70 @@
+ControlType.Pane|Host de ventanas emergentes
+ControlType.Pane|
+ControlType.Window|Ventana emergente
+ControlType.Button|Cerrar
+ControlType.ComboBox|Carrera
+ControlType.ListItem|Administración de Empresas
+ControlType.Text|Administración de Empresas
+ControlType.ListItem|Derecho
+ControlType.Text|Derecho
+ControlType.ListItem|Ingeniería en Sistemas
+ControlType.Text|Ingeniería en Sistemas
+ControlType.ListItem|Medicina
+ControlType.Text|Medicina
+ControlType.ListItem|Psicología
+ControlType.Text|Psicología
+ControlType.Button|Cerrar
+ControlType.Text|
+ControlType.Text|
+ControlType.Button|Guardar
+ControlType.Button|Limpiar
+ControlType.Text|Estudiantes registrados
+ControlType.List|
+ControlType.ScrollBar|Vertical
+ControlType.Pane|Non Client Input Sink Window
+ControlType.Pane|AppWindow Custom Title Bar
+ControlType.Button|Minimize
+ControlType.Button|Maximize
+ControlType.Button|Close
+ControlType.Pane|
+ControlType.Pane|
+ControlType.Text|
+ControlType.Custom|
+ControlType.Text|Registro de estudiante
+ControlType.Text|Completa tus datos para registrar tu información académica.
+ControlType.Pane|
+ControlType.Text|Datos personales
+ControlType.Text|Nombre completo
+ControlType.Edit|Nombre completo
+ControlType.Text|
+ControlType.Text|Teléfono
+ControlType.Edit|Teléfono
+ControlType.Text|
+ControlType.Text|Fecha
+ControlType.Button|Fecha del registro
+ControlType.Text|Selecciona una fecha
+ControlType.Text|
+ControlType.Text|Información académica
+ControlType.Text|Correo electrónico
+ControlType.Edit|Correo electrónico
+ControlType.Text|
+ControlType.Text|Carrera
+ControlType.ComboBox|Carrera
+ControlType.ListItem|Administración de Empresas
+ControlType.Text|Administración de Empresas
+ControlType.ListItem|Derecho
+ControlType.Text|Derecho
+ControlType.ListItem|Ingeniería en Sistemas
+ControlType.Text|Ingeniería en Sistemas
+ControlType.ListItem|Medicina
+ControlType.Text|Medicina
+ControlType.ListItem|Psicología
+ControlType.Text|Psicología
+ControlType.Button|Cerrar
+ControlType.Text|
+ControlType.Text|
+ControlType.Button|Guardar
+ControlType.Button|Limpiar
+ControlType.Text|Estudiantes registrados
+ControlType.List|
+ControlType.ScrollBar|Vertical

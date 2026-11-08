@@ -1,0 +1,14 @@
+# Visual Studio and user-specific settings
+.vs/
+*.suo
+*.user
+*.csproj.user
+
+# Build output
+**/bin/
+**/obj/
+TestResults/
+
+# Operating system files
+.DS_Store
+Thumbs.db

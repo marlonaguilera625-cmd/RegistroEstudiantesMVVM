@@ -1,0 +1,57 @@
+using Microsoft.Extensions.Logging;
+using Microsoft.Maui.Handlers;
+using RegistroEstudianteMAUI.Services;
+using RegistroEstudianteMAUI.ViewModels;
+using RegistroEstudianteMAUI.Views;
+
+namespace RegistroEstudianteMAUI
+{
+    public static class MauiProgram
+    {
+        public static MauiApp CreateMauiApp()
+        {
+            var builder = MauiApp.CreateBuilder();
+            builder
+                .UseMauiApp<App>()
+                .ConfigureFonts(fonts =>
+                {
+                    fonts.AddFont("OpenSans-Regular.ttf", "OpenSansRegular");
+                    fonts.AddFont("OpenSans-Semibold.ttf", "OpenSansSemibold");
+                });
+
+#if WINDOWS
+            EntryHandler.Mapper.AppendToMapping("FieldFrame", (handler, view) =>
+            {
+                handler.PlatformView.BorderThickness = new Microsoft.UI.Xaml.Thickness(0);
+                handler.PlatformView.Background = null;
+            });
+            PickerHandler.Mapper.AppendToMapping("FieldFrame", (handler, view) =>
+            {
+                handler.PlatformView.BorderThickness = new Microsoft.UI.Xaml.Thickness(0);
+                handler.PlatformView.Background = null;
+                handler.PlatformView.VerticalContentAlignment = Microsoft.UI.Xaml.VerticalAlignment.Center;
+            });
+            DatePickerHandler.Mapper.AppendToMapping("FieldFrame", (handler, view) =>
+            {
+                handler.PlatformView.BorderThickness = new Microsoft.UI.Xaml.Thickness(0);
+                handler.PlatformView.Background = null;
+            });
+#elif ANDROID
+            EntryHandler.Mapper.AppendToMapping("FieldFrame", (handler, view) => handler.PlatformView.Background = null);
+            PickerHandler.Mapper.AppendToMapping("FieldFrame", (handler, view) => handler.PlatformView.Background = null);
+            DatePickerHandler.Mapper.AppendToMapping("FieldFrame", (handler, view) => handler.PlatformView.Background = null);
+#endif
+
+            builder.Services.AddSingleton<IEstudianteService, EstudianteService>();
+            builder.Services.AddTransient<RegistroViewModel>();
+            builder.Services.AddTransient<RegistroPage>();
+
+#if DEBUG
+            builder.Logging.AddDebug();
+#endif
+
+            return builder.Build();
+        }
+    }
+}
+

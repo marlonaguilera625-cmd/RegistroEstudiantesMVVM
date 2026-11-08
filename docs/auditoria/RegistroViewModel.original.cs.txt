@@ -1,0 +1,155 @@
+using CommunityToolkit.Mvvm.ComponentModel;
+using CommunityToolkit.Mvvm.Input;
+using RegistroEstudianteMAUI.Models;
+using RegistroEstudianteMAUI.Services;
+using System.Collections.ObjectModel;
+
+namespace RegistroEstudianteMAUI.ViewModels;
+
+public partial class RegistroViewModel : ObservableObject
+{
+    private readonly IEstudianteService _estudianteService;
+    private bool _mostrarErrores;
+    private bool _limpiandoFormulario;
+
+    [ObservableProperty]
+    [NotifyCanExecuteChangedFor(nameof(GuardarCommand))]
+    [NotifyPropertyChangedFor(nameof(NombreError))]
+    private string nombre = string.Empty;
+
+    partial void OnNombreChanged(string value) => NotificarInteraccionConFormulario();
+
+    [ObservableProperty]
+    [NotifyCanExecuteChangedFor(nameof(GuardarCommand))]
+    [NotifyPropertyChangedFor(nameof(CorreoError))]
+    private string correo = string.Empty;
+
+    partial void OnCorreoChanged(string value) => NotificarInteraccionConFormulario();
+
+    [ObservableProperty]
+    [NotifyCanExecuteChangedFor(nameof(GuardarCommand))]
+    [NotifyPropertyChangedFor(nameof(TelefonoError))]
+    private string telefono = string.Empty;
+
+    partial void OnTelefonoChanged(string value) => NotificarInteraccionConFormulario();
+
+    [ObservableProperty]
+    [NotifyCanExecuteChangedFor(nameof(GuardarCommand))]
+    [NotifyPropertyChangedFor(nameof(CarreraError))]
+    private string carrera = string.Empty;
+
+    partial void OnCarreraChanged(string value) => NotificarInteraccionConFormulario();
+
+    [ObservableProperty]
+    [NotifyCanExecuteChangedFor(nameof(GuardarCommand))]
+    [NotifyPropertyChangedFor(nameof(FechaError))]
+    private DateTime fecha = DateTime.Today.AddYears(-18);
+
+    partial void OnFechaChanged(DateTime value)
+    {
+        if (!_limpiandoFormulario)
+        {
+            FechaSeleccionada = true;
+            NotificarInteraccionConFormulario();
+        }
+    }
+
+    [ObservableProperty]
+    private bool fechaSeleccionada;
+
+    public bool FechaSinSeleccionar => !FechaSeleccionada;
+
+    partial void OnFechaSeleccionadaChanged(bool value) => OnPropertyChanged(nameof(FechaSinSeleccionar));
+
+    [ObservableProperty]
+    private string mensaje = string.Empty;
+
+    public ObservableCollection<Estudiante> Estudiantes { get; } = [];
+    public IReadOnlyList<string> Carreras { get; } =
+        ["Administración de Empresas", "Derecho", "Ingeniería en Sistemas", "Medicina", "Psicología"];
+
+    public string NombreError => _mostrarErrores ? ObtenerError(nameof(Estudiante.Nombre)) : string.Empty;
+    public string CorreoError => _mostrarErrores ? ObtenerError(nameof(Estudiante.Correo)) : string.Empty;
+    public string TelefonoError => _mostrarErrores ? ObtenerError(nameof(Estudiante.Telefono)) : string.Empty;
+    public string CarreraError => _mostrarErrores ? ObtenerError(nameof(Estudiante.Carrera)) : string.Empty;
+    public string FechaError => _mostrarErrores ? ObtenerError(nameof(Estudiante.Fecha)) : string.Empty;
+
+    public RegistroViewModel(IEstudianteService estudianteService)
+    {
+        _estudianteService = estudianteService;
+    }
+
+    private bool PuedeGuardar() => _estudianteService.Validar(CrearEstudiante()).Count == 0;
+
+    [RelayCommand(CanExecute = nameof(PuedeGuardar))]
+    private void Guardar()
+    {
+        var estudiante = CrearEstudiante();
+        var errores = _estudianteService.Validar(estudiante);
+        if (errores.Count > 0)
+        {
+            _mostrarErrores = true;
+            Mensaje = "Revisa los campos indicados antes de continuar.";
+            NotificarErrores();
+            return;
+        }
+
+        Estudiantes.Add(estudiante);
+        Mensaje = $"Registro guardado para {estudiante.Nombre}.";
+        LimpiarCampos();
+        _mostrarErrores = false;
+        NotificarErrores();
+    }
+
+    [RelayCommand]
+    private void Limpiar()
+    {
+        LimpiarCampos();
+        _mostrarErrores = false;
+        NotificarErrores();
+        Mensaje = string.Empty;
+    }
+
+    private void LimpiarCampos()
+    {
+        _limpiandoFormulario = true;
+        Nombre = string.Empty;
+        Correo = string.Empty;
+        Telefono = string.Empty;
+        Carrera = string.Empty;
+        Fecha = DateTime.Today.AddYears(-18);
+        _limpiandoFormulario = false;
+        FechaSeleccionada = false;
+    }
+
+    private void NotificarInteraccionConFormulario()
+    {
+        if (_limpiandoFormulario)
+            return;
+
+        _mostrarErrores = true;
+        NotificarErrores();
+    }
+
+    private void NotificarErrores()
+    {
+        OnPropertyChanged(nameof(NombreError));
+        OnPropertyChanged(nameof(CorreoError));
+        OnPropertyChanged(nameof(TelefonoError));
+        OnPropertyChanged(nameof(CarreraError));
+        OnPropertyChanged(nameof(FechaError));
+    }
+
+    private Estudiante CrearEstudiante() => new()
+    {
+        Nombre = Nombre.Trim(),
+        Correo = Correo.Trim(),
+        Telefono = Telefono.Trim(),
+        Carrera = Carrera,
+        Fecha = Fecha.Date
+    };
+
+    private string ObtenerError(string propiedad) =>
+        _estudianteService.Validar(CrearEstudiante()).TryGetValue(propiedad, out var error) ? error : string.Empty;
+}
+

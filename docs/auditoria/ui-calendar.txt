@@ -1,0 +1,102 @@
+ControlType.Window|
+ControlType.Pane|Host de ventanas emergentes
+ControlType.Pane|
+ControlType.Window|Ventana emergente
+ControlType.Pane|
+ControlType.Calendar|
+ControlType.Button|?noviembre? de ?2026
+ControlType.Button|Anterior
+ControlType.Button|Siguiente
+ControlType.Text|domingo
+ControlType.Text|lunes
+ControlType.Text|martes
+ControlType.Text|miércoles
+ControlType.Text|jueves
+ControlType.Text|viernes
+ControlType.Text|sábado
+ControlType.Pane|
+ControlType.DataItem|25
+ControlType.DataItem|26
+ControlType.DataItem|27
+ControlType.DataItem|28
+ControlType.DataItem|29
+ControlType.DataItem|30
+ControlType.DataItem|31
+ControlType.DataItem|1
+ControlType.DataItem|2
+ControlType.DataItem|3
+ControlType.DataItem|4
+ControlType.DataItem|5
+ControlType.DataItem|6
+ControlType.DataItem|7
+ControlType.DataItem|8, hoy
+ControlType.DataItem|9
+ControlType.DataItem|10
+ControlType.DataItem|11
+ControlType.DataItem|12
+ControlType.DataItem|13
+ControlType.DataItem|14
+ControlType.DataItem|15
+ControlType.DataItem|16
+ControlType.DataItem|17
+ControlType.DataItem|18
+ControlType.DataItem|19
+ControlType.DataItem|20
+ControlType.DataItem|21
+ControlType.DataItem|22
+ControlType.DataItem|23
+ControlType.DataItem|24
+ControlType.DataItem|25
+ControlType.DataItem|26
+ControlType.DataItem|27
+ControlType.DataItem|28
+ControlType.DataItem|29
+ControlType.DataItem|30
+ControlType.DataItem|1
+ControlType.DataItem|2
+ControlType.DataItem|3
+ControlType.DataItem|4
+ControlType.DataItem|5
+ControlType.DataItem|6
+ControlType.DataItem|7
+ControlType.DataItem|8
+ControlType.DataItem|9
+ControlType.DataItem|10
+ControlType.DataItem|11
+ControlType.DataItem|12
+ControlType.Pane|Non Client Input Sink Window
+ControlType.Pane|AppWindow Custom Title Bar
+ControlType.Button|Minimize
+ControlType.Button|Maximize
+ControlType.Button|Close
+ControlType.Pane|
+ControlType.Pane|
+ControlType.Text|
+ControlType.Custom|
+ControlType.Text|Registro de estudiante
+ControlType.Text|Completa tus datos para registrar tu información académica.
+ControlType.Pane|
+ControlType.Text|Datos personales
+ControlType.Text|Nombre completo
+ControlType.Edit|Nombre completo
+ControlType.Text|
+ControlType.Text|Teléfono
+ControlType.Edit|Teléfono
+ControlType.Text|
+ControlType.Text|Fecha
+ControlType.Button|Fecha del registro
+ControlType.Text|Selecciona una fecha
+ControlType.Text|Selecciona una fecha válida que no sea futura.
+ControlType.Text|Información académica
+ControlType.Text|Correo electrónico
+ControlType.Edit|Correo electrónico
+ControlType.Text|
+ControlType.Text|Carrera
+ControlType.ComboBox|Carrera
+ControlType.Text|
+ControlType.Text|
+ControlType.Button|Guardar
+ControlType.Button|Limpiar
+ControlType.Text|Estudiantes registrados
+ControlType.List|
+ControlType.ScrollBar|Vertical

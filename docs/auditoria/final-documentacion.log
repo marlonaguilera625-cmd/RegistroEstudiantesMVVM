@@ -1,0 +1,8 @@
+PASS: 34 enlaces relativos y sus anclas existen.
+PASS: 01-formulario.png decodificado, 1365x698, SHA256=DFF00ACCBAC8582DAB614F695E4165E15CD7C0F885A34A9B7816EBB7DD625A51
+PASS: 02-lista-estudiantes.png decodificado, 1365x716, SHA256=0129C61C754169BEC00B25BF6876988BB107D72A9305D7940E408CB81405BB6E
+PASS: 20 archivos XML/XAML/proyecto bien formados.
+PASS: diagrama con 8 nodos y 11 aristas coherentes en el subconjunto comprobado; no se ejecuta el renderizador GitHub/Mermaid.
+PASS: exclusiones de herramientas, compilación y pruebas presentes en .gitignore.
+PASS: hashes de fuentes, recursos, pruebas y capturas oficiales iguales a la instantánea inicial de esta auditoría.
+PASS: ambos scripts de auditoría sin errores de sintaxis PowerShell.

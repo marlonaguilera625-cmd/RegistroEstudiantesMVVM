@@ -1,0 +1,18 @@
+ComboBox  actual=413x56 height=56 min=56 vertical=Stretch margin=0,0,0,0
+ Grid LayoutRoot actual=413x56 height=NaN min=0 vertical=Stretch margin=0,0,0,0
+ROWS Auto:29,1*:27,Auto:0
+  ContentPresenter HeaderContentPresenter actual=413x21 height=NaN min=0 vertical=Top margin=0,0,0,8
+   TextBlock  actual=0x21.28125 height=NaN min=0 vertical=Stretch margin=0,0,0,0
+  Border HighlightBackground actual=421x35 height=NaN min=0 vertical=Stretch margin=-4,-4,-4,-4
+  Border Background actual=413x27 height=NaN min=0 vertical=Stretch margin=0,0,0,0
+  Rectangle Pill actual=3x16 height=16 min=0 vertical=Stretch margin=1,0,0,0
+  ContentPresenter ContentPresenter actual=159x22 height=NaN min=0 vertical=Center margin=12,0,32,0
+   TextBlock PlaceholderTextBlock actual=158.1328125x21.28125 height=NaN min=0 vertical=Stretch margin=0,0,0,0
+  TextBox EditableText actual=0x0 height=NaN min=0 vertical=Center margin=0,0,0,0
+  Border DropDownOverlay actual=0x0 height=NaN min=0 vertical=Stretch margin=4,4,4,4
+  AnimatedIcon DropDownGlyph actual=12x32 height=12 min=32 vertical=Center margin=0,0,14,0
+   Grid  actual=0x0 height=NaN min=0 vertical=Stretch margin=0,0,0,0
+ROWS 
+    Path  actual=0x0 height=NaN min=0 vertical=Stretch margin=0,0,0,0
+  ContentPresenter DescriptionPresenter actual=413x0 height=NaN min=0 vertical=Stretch margin=0,0,0,0
+  Popup Popup actual=375x29 height=NaN min=0 vertical=Stretch margin=0,0,0,0
